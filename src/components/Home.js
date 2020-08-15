@@ -13,7 +13,7 @@ function Home() {
         <Product
           id="123123123"
           title="The Lean Startup: How to cope with post depression"
-          price={11.99}
+          price={110.99}
           rating={5}
           image={star_wars}
         />
