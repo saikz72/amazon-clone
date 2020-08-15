@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 
 function App() {
+  console.log("hi");
   return (
     <Router>
       <div className="app">
