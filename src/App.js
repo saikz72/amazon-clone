@@ -1,20 +1,22 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/checkout">
+          <Route path="/Checkout">
             <h1>checkout</h1>
           </Route>
-          <Route path="/login">
+          <Route path="/Login">
             <h1>login</h1>
           </Route>
           <Route path="/">
-            <h1>Wellcome to amazon clone</h1>
+            <Header />
+            <h1>Wellcome to Amazon</h1>
           </Route>
         </Switch>
       </div>
