@@ -8,6 +8,8 @@ export const getBasketTotal = (basket) =>
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "SET_USER":
+      return { ...state, user: action.user };
     case "ADD_TO_BASKET":
       //Logic for adding items in basket
       return { ...state, basket: [...state.basket, action.item] };

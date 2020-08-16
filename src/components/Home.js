@@ -21,7 +21,7 @@ function Home() {
           id="123123123"
           title="The Lean Startup: How to cope with post depression"
           price={11.99}
-          rating={5}
+          rating={2}
           image={star_wars}
         />
       </div>
@@ -30,7 +30,7 @@ function Home() {
           id="123123123"
           title="The Lean Startup: How to cope with post depression"
           price={11.99}
-          rating={5}
+          rating={1}
           image={star_wars}
         />
         <Product
@@ -53,7 +53,7 @@ function Home() {
           id="123123123"
           title="The Lean Startup: How to cope with post depression"
           price={11.99}
-          rating={5}
+          rating={4}
           image={star_wars}
         />
       </div>
