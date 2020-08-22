@@ -1,8 +1,8 @@
-import React from "react";
-import "../styles/Home.css";
-import Product from "./Product";
-import star_wars from "../assets/star_wars.jpg";
-import banner from "../assets/Amazon-Prime-Day-2018-Featured-Banner.jpg";
+import React from 'react';
+import '../styles/Home.css';
+import Product from './Product';
+import star_wars from '../assets/star_wars.jpg';
+import banner from '../assets/Amazon-Prime-Day-2018-Featured-Banner.jpg';
 
 function Home() {
   return (

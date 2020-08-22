@@ -1,6 +1,6 @@
-import React from "react";
-import "../styles/Product.css";
-import { useStateValue } from "./StateProvider";
+import React from 'react';
+import '../styles/Product.css';
+import { useStateValue } from './StateProvider';
 
 function Product({ title, id, rating, price, image }) {
   const [{}, dispatch] = useStateValue();
@@ -8,7 +8,7 @@ function Product({ title, id, rating, price, image }) {
   //add item to basket function
   const addToBasket = () => {
     dispatch({
-      type: "ADD_TO_BASKET",
+      type: 'ADD_TO_BASKET',
       item: {
         id: id,
         title: title,

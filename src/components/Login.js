@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import "../styles/Login.css";
-import { Link, useHistory } from "react-router-dom";
-import logo from "../assets/logo.png";
-import { auth } from "../firebaseConfig";
+import React, { useState } from 'react';
+import '../styles/Login.css';
+import { Link, useHistory } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import { auth, provider } from '../firebaseConfig';
 
 function Login() {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const login = (event) => {
     event.preventDefault(); //this stops refresh
@@ -16,7 +16,7 @@ function Login() {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         //logged in, redirect to homepage
-        history.push("/");
+        history.push('/');
       })
       .catch((e) => alert(e.message));
   };
@@ -27,9 +27,23 @@ function Login() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         //signs up, redirect to homepage
-        history.push("/");
+        history.push('/');
       })
       .catch((e) => alert(e.message));
+  };
+
+  const googleAuth = (event) => {
+    event.preventDefault(); //this stops refres
+    //do google sign up logic
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        history.push('/');
+        console.log(result);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   return (
     <div className="login">
@@ -58,6 +72,9 @@ function Login() {
         <p>By signinn-in you're agreeing to our terms and conditions</p>
         <button onClick={signUp} className="login__signUpButton">
           Create your Amazon Account
+        </button>
+        <button onClick={googleAuth} className="login__googleSignUp">
+          Sign up with google
         </button>
       </div>
     </div>

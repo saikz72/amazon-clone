@@ -23,7 +23,7 @@ function Header() {
       </Link>
       {/* Search box */}
       <div className="header__search">
-        <input className="header__searchInput" type="text" />
+        <inpsut className="header__searchInput" type="text" />
         <SearchIcon className="header__searchIcon" />
       </div>
       {/* 3 Links */}
@@ -39,7 +39,7 @@ function Header() {
         </Link>
 
         {/* 2nd Link */}
-        <Link className="header__link" to="/Login">
+        <Link className="header__link" to="/">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
             <span className="header__optionLineTwo">& Orders</span>
@@ -47,7 +47,7 @@ function Header() {
         </Link>
 
         {/* 3rd Link */}
-        <Link className="header__link" to="/Login">
+        <Link className="header__link" to="/">
           <div className="header__option">
             <span className="header__optionLineOne">Your</span>
             <span className="header__optionLineTwo">Prime</span>
